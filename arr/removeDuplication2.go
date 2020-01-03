@@ -26,18 +26,6 @@ func main() {
 	PrintListNode(head)
 
 }
-func PrintListNode(head *ListNode) {
-	cur := head
-	for {
-		fmt.Printf("%d \t", cur.Val)
-		if cur.Next != nil {
-			cur = cur.Next
-		} else {
-			fmt.Printf("\n")
-			break
-		}
-	}
-}
 
 /**
  *
@@ -92,4 +80,17 @@ func deleteDuplicates(head *ListNode) *ListNode {
 type ListNode struct {
 	Val  int
 	Next *ListNode
+}
+
+func PrintListNode(head *ListNode) {
+	cur := head
+	for {
+		fmt.Printf("%d \t", cur.Val)
+		if cur.Next != nil {
+			cur = cur.Next
+		} else {
+			fmt.Printf("\n")
+			break
+		}
+	}
 }
