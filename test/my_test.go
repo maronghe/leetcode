@@ -47,4 +47,16 @@ func Test(t *testing.T) {
 	i64 := int8(1)
 	// return type size, it is constant
 	fmt.Println(unsafe.Sizeof(i64)) // 1
+
+}
+
+func ByteCounterTest(t *testing.T) {
+
+}
+
+type ByteCounter int
+
+func (c *ByteCounter) Write(p []byte) (int, error) {
+	*c += ByteCounter(len(p)) // int 转为 ByteCounter
+	return len(p), nil
 }
