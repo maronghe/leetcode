@@ -5,15 +5,14 @@ import (
 	"testing"
 )
 
-// go test -v -bench=. -cpu=16 -benchtime="2s" -timeout="2s" -benchmem
-func BenchmarkReuse(t *testing.B) {
-	t.ResetTimer()
+func TestMultiSort(t *testing.T) {
 
 	array := []int{3, 1, 4, 1, 5, 9, 2, 6}
 	ch := make(chan int)
+	fmt.Println(array)
 	go quickSort(array, ch)
-	for value := range ch {
-		fmt.Println(value)
+	for v := range ch {
+		fmt.Printf("%d ", v)
 	}
 }
 
