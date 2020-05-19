@@ -1,6 +1,7 @@
 package s
 
-func validPalindrome(s string) bool {
+// ValidPalindrome LeetCode #680
+func ValidPalindrome(s string) bool {
 	i, j := 0, len(s)-1
 	for i < j {
 		if s[i] != s[j] {
