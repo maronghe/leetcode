@@ -8,7 +8,7 @@ import (
 // https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/
 
 // 四种解法：
-// 	1. 暴力 - 两层循环  时间 O(n^2) 空间 O(1)
+//  1. 暴力 - 两层循环  时间 O(n^2) 空间 O(1)
 //  2. hash表  时间 O(n) 空间 O(n)
 //  3. 排序后遍历  时间 O(NLogN) 空间 O(1)
 //  4. 扫描(比较并交换）时间 O(n) 空间 O(1)   |最优解|

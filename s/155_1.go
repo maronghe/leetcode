@@ -1,6 +1,6 @@
 package s
 
-// time:16 ms	memery:7.6 MB	
+// time:16 ms	memery:7.6 MB
 
 // method 1
 type record struct {
@@ -83,8 +83,7 @@ func (this *MinStack) GetMin() int {
 //	return this.minStack[len(this.minStack)-1]
 //}
 
-
-// method 3 
+// method 3
 // time: 20 ms	memery: 7.8 MB
 
 //import "math"
@@ -110,16 +109,16 @@ func (this *MinStack) GetMin() int {
 
 //func (this *MinStack) Pop() {
 //	this.stack = this.stack[:len(this.stack)-1]
-	this.minStack = this.minStack[:len(this.minStack)-1]
-}
+//	this.minStack = this.minStack[:len(this.minStack)-1]
+//}
 
-func (this *MinStack) Top() int {
-	return this.stack[len(this.stack)-1]
-}
+//func (this *MinStack) Top() int {
+//	return this.stack[len(this.stack)-1]
+//}
 
-func (this *MinStack) GetMin() int {
-	return this.minStack[len(this.minStack)-1]
-}
+//func (this *MinStack) GetMin() int {
+//	return this.minStack[len(this.minStack)-1]
+//}
 
 func min(a, b int) int {
 	if a > b {

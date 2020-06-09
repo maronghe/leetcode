@@ -1,5 +1,7 @@
 package s
 
+import "runtime"
+
 var memo = make([][]*TreeNode, 20)
 
 func allPossibleFBT(N int) []*TreeNode {
@@ -20,5 +22,7 @@ func allPossibleFBT(N int) []*TreeNode {
 			}
 		}
 	}
+	runtime.GOMAXPROCS(runtime.NumCPU())
+
 	return res
 }

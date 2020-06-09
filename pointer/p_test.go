@@ -13,12 +13,24 @@ func TestHelloWorld(t *testing.T) {
 	//	modifyNameByPoint(foo)
 	//	fmt.Printf("foo: %v address: %p \n", foo, &foo) // 3
 
-	foo := Foo{Name: "biezhi"}
-	fmt.Printf("foo: %v address: %p \n", foo, &foo) // 1
+	//foo := Foo{Name: "biezhi"}
+	//fmt.Printf("foo: %v address: %p \n", foo, &foo) // 1
 
-	str := nameToUpper(foo)
-	fmt.Printf("foo: %v address: %p str:%s\n", foo, &foo, str) // 3
+	//str := nameToUpper(foo)
+	//fmt.Printf("foo: %v address: %p str:%s\n", foo, &foo, str) // 3
+	var list []*Stu
+	list = append(list, &Stu{"maronghe", 123})
+	list = append(list, &Stu{"maronghe", 123})
+	fmt.Printf("%+v\n", list)
+	for _, v := range list {
+		fmt.Println(*v)
+	}
 
+}
+
+type Stu struct {
+	name string
+	age  int
 }
 
 func nameToUpper(foo Foo) string {
